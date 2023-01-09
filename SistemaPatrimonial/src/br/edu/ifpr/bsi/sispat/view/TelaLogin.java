@@ -31,7 +31,7 @@ public class TelaLogin extends javax.swing.JFrame {
         jTFLogin = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
         jPFSenha = new javax.swing.JPasswordField();
-        jButton1 = new javax.swing.JButton();
+        jBTEntrar = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -44,7 +44,12 @@ public class TelaLogin extends javax.swing.JFrame {
 
         jLabel3.setText("Senha");
 
-        jButton1.setText("ENTRAR");
+        jBTEntrar.setText("ENTRAR");
+        jBTEntrar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jBTEntrarActionPerformed(evt);
+            }
+        });
 
         jButton2.setText("SAIR");
 
@@ -66,7 +71,7 @@ public class TelaLogin extends javax.swing.JFrame {
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(48, 48, 48)
-                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jBTEntrar, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(47, 47, 47))
         );
         layout.setVerticalGroup(
@@ -84,7 +89,7 @@ public class TelaLogin extends javax.swing.JFrame {
                 .addComponent(jPFSenha, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(27, 27, 27)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
+                    .addComponent(jBTEntrar)
                     .addComponent(jButton2))
                 .addContainerGap(40, Short.MAX_VALUE))
         );
@@ -92,6 +97,12 @@ public class TelaLogin extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jBTEntrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTEntrarActionPerformed
+        // TODO add your handling code here:
+        TelaPrincipal tela = new TelaPrincipal();
+        tela.setVisible(true);
+    }//GEN-LAST:event_jBTEntrarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -129,7 +140,7 @@ public class TelaLogin extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jBTEntrar;
     private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;

@@ -1,7 +1,4 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
- */
+
 package br.edu.ifpr.bsi.sispat.view;
 
 /**
@@ -15,6 +12,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
      */
     public TelaPrincipal() {
         initComponents();
+        
+        setExtendedState(MAXIMIZED_BOTH);
     }
 
     /**
@@ -27,16 +26,133 @@ public class TelaPrincipal extends javax.swing.JFrame {
     private void initComponents() {
 
         jMenuBar1 = new javax.swing.JMenuBar();
-        jMenu1 = new javax.swing.JMenu();
-        jMenu2 = new javax.swing.JMenu();
+        jMCadastros = new javax.swing.JMenu();
+        jMDepartamento = new javax.swing.JMenu();
+        jMDepCadastro = new javax.swing.JMenuItem();
+        jMDepConsulta = new javax.swing.JMenuItem();
+        jMenu7 = new javax.swing.JMenu();
+        jMPatriCadastro = new javax.swing.JMenuItem();
+        jMPatriConsulta = new javax.swing.JMenuItem();
+        jMenu8 = new javax.swing.JMenu();
+        jMFuncCadastro = new javax.swing.JMenuItem();
+        jMFuncConsulta = new javax.swing.JMenuItem();
+        jMRelatorios = new javax.swing.JMenu();
+        jMenuItem1 = new javax.swing.JMenuItem();
+        jMenuItem2 = new javax.swing.JMenuItem();
+        jMenuItem3 = new javax.swing.JMenuItem();
+        jMSeguranca = new javax.swing.JMenu();
+        jMenuItem4 = new javax.swing.JMenuItem();
+        jMenuItem5 = new javax.swing.JMenuItem();
+        jMFerramentas = new javax.swing.JMenu();
+        jMTelaFundo = new javax.swing.JMenu();
+        jMAddImagem = new javax.swing.JMenuItem();
+        jMRemoverImagem = new javax.swing.JMenuItem();
+        jMRestaurarImagem = new javax.swing.JMenuItem();
+        jMSobreSistema = new javax.swing.JMenuItem();
+        jMSair = new javax.swing.JMenu();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("CP - Tela Principal");
 
-        jMenu1.setText("Cadastros  |");
-        jMenuBar1.add(jMenu1);
+        jMCadastros.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/registro.png"))); // NOI18N
+        jMCadastros.setText("Cadastros  |");
 
-        jMenu2.setText("Edit");
-        jMenuBar1.add(jMenu2);
+        jMDepartamento.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/departamento.png"))); // NOI18N
+        jMDepartamento.setText("Departamentos");
+
+        jMDepCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/mais.png"))); // NOI18N
+        jMDepCadastro.setText("Cadastrar");
+        jMDepartamento.add(jMDepCadastro);
+
+        jMDepConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/pesquisa.png"))); // NOI18N
+        jMDepConsulta.setText("Consultar");
+        jMDepartamento.add(jMDepConsulta);
+
+        jMCadastros.add(jMDepartamento);
+
+        jMenu7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/patrimonios.png"))); // NOI18N
+        jMenu7.setText("Patrimônios");
+
+        jMPatriCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/mais.png"))); // NOI18N
+        jMPatriCadastro.setText("Cadastrar");
+        jMenu7.add(jMPatriCadastro);
+
+        jMPatriConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/pesquisa.png"))); // NOI18N
+        jMPatriConsulta.setText("Consultar");
+        jMPatriConsulta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMPatriConsultaActionPerformed(evt);
+            }
+        });
+        jMenu7.add(jMPatriConsulta);
+
+        jMCadastros.add(jMenu7);
+
+        jMenu8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/funcionario.png"))); // NOI18N
+        jMenu8.setText("Funcionário");
+
+        jMFuncCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/mais.png"))); // NOI18N
+        jMFuncCadastro.setText("Cadastrar");
+        jMenu8.add(jMFuncCadastro);
+
+        jMFuncConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/pesquisa.png"))); // NOI18N
+        jMFuncConsulta.setText("Consultar");
+        jMenu8.add(jMFuncConsulta);
+
+        jMCadastros.add(jMenu8);
+
+        jMenuBar1.add(jMCadastros);
+
+        jMRelatorios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/relatorio.png"))); // NOI18N
+        jMRelatorios.setText("Relatórios   |");
+
+        jMenuItem1.setText("Departamentos");
+        jMRelatorios.add(jMenuItem1);
+
+        jMenuItem2.setText("Funcionários");
+        jMRelatorios.add(jMenuItem2);
+
+        jMenuItem3.setText("Patrimônios");
+        jMRelatorios.add(jMenuItem3);
+
+        jMenuBar1.add(jMRelatorios);
+
+        jMSeguranca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/view/trancar.png"))); // NOI18N
+        jMSeguranca.setText("Segurança   |");
+
+        jMenuItem4.setText("Fazer backup");
+        jMSeguranca.add(jMenuItem4);
+
+        jMenuItem5.setText("Restaurar backup");
+        jMSeguranca.add(jMenuItem5);
+
+        jMenuBar1.add(jMSeguranca);
+
+        jMFerramentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/processo.png"))); // NOI18N
+        jMFerramentas.setText("Ferramentas   |");
+
+        jMTelaFundo.setText("Tela de fundo");
+
+        jMAddImagem.setText("Add imagem");
+        jMTelaFundo.add(jMAddImagem);
+
+        jMRemoverImagem.setText("Remover imagem");
+        jMTelaFundo.add(jMRemoverImagem);
+
+        jMRestaurarImagem.setText("Restaurar padrão");
+        jMTelaFundo.add(jMRestaurarImagem);
+
+        jMFerramentas.add(jMTelaFundo);
+
+        jMSobreSistema.setText("Sobre o sistema");
+        jMFerramentas.add(jMSobreSistema);
+
+        jMenuBar1.add(jMFerramentas);
+
+        jMSair.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/sair.png"))); // NOI18N
+        jMSair.setText("Sair");
+        jMSair.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jMenuBar1.add(jMSair);
 
         setJMenuBar(jMenuBar1);
 
@@ -48,11 +164,15 @@ public class TelaPrincipal extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 430, Short.MAX_VALUE)
+            .addGap(0, 397, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMPatriConsultaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMPatriConsultaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jMPatriConsultaActionPerformed
 
     /**
      * @param args the command line arguments
@@ -90,8 +210,30 @@ public class TelaPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JMenu jMenu1;
-    private javax.swing.JMenu jMenu2;
+    private javax.swing.JMenuItem jMAddImagem;
+    private javax.swing.JMenu jMCadastros;
+    private javax.swing.JMenuItem jMDepCadastro;
+    private javax.swing.JMenuItem jMDepConsulta;
+    private javax.swing.JMenu jMDepartamento;
+    private javax.swing.JMenu jMFerramentas;
+    private javax.swing.JMenuItem jMFuncCadastro;
+    private javax.swing.JMenuItem jMFuncConsulta;
+    private javax.swing.JMenuItem jMPatriCadastro;
+    private javax.swing.JMenuItem jMPatriConsulta;
+    private javax.swing.JMenu jMRelatorios;
+    private javax.swing.JMenuItem jMRemoverImagem;
+    private javax.swing.JMenuItem jMRestaurarImagem;
+    private javax.swing.JMenu jMSair;
+    private javax.swing.JMenu jMSeguranca;
+    private javax.swing.JMenuItem jMSobreSistema;
+    private javax.swing.JMenu jMTelaFundo;
+    private javax.swing.JMenu jMenu7;
+    private javax.swing.JMenu jMenu8;
     private javax.swing.JMenuBar jMenuBar1;
+    private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
+    private javax.swing.JMenuItem jMenuItem3;
+    private javax.swing.JMenuItem jMenuItem4;
+    private javax.swing.JMenuItem jMenuItem5;
     // End of variables declaration//GEN-END:variables
 }

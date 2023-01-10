@@ -82,6 +82,9 @@
                     </Property>
                     <Property name="text" type="java.lang.String" value="Cadastrar"/>
                   </Properties>
+                  <Events>
+                    <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jMFuncCadastroActionPerformed"/>
+                  </Events>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMFuncConsulta">
                   <Properties>
@@ -121,6 +124,9 @@
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem3">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/patrimonios.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Patrim&#xf4;nios"/>
               </Properties>
             </MenuItem>
@@ -136,11 +142,17 @@
           <SubComponents>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem4">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/fazer-backup.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Fazer backup"/>
               </Properties>
             </MenuItem>
             <MenuItem class="javax.swing.JMenuItem" name="jMenuItem5">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/restaurar-backup.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Restaurar backup"/>
               </Properties>
             </MenuItem>
@@ -156,21 +168,33 @@
           <SubComponents>
             <Menu class="javax.swing.JMenu" name="jMTelaFundo">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/imagem.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Tela de fundo"/>
               </Properties>
               <SubComponents>
                 <MenuItem class="javax.swing.JMenuItem" name="jMAddImagem">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/adicionar-imagem.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Add imagem"/>
                   </Properties>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMRemoverImagem">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/remover-imagem.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Remover imagem"/>
                   </Properties>
                 </MenuItem>
                 <MenuItem class="javax.swing.JMenuItem" name="jMRestaurarImagem">
                   <Properties>
+                    <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                      <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/restaurar-imagem.png"/>
+                    </Property>
                     <Property name="text" type="java.lang.String" value="Restaurar padr&#xe3;o"/>
                   </Properties>
                 </MenuItem>
@@ -178,6 +202,9 @@
             </Menu>
             <MenuItem class="javax.swing.JMenuItem" name="jMSobreSistema">
               <Properties>
+                <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+                  <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/icones/sobre.png"/>
+                </Property>
                 <Property name="text" type="java.lang.String" value="Sobre o sistema"/>
               </Properties>
             </MenuItem>
@@ -231,9 +258,9 @@
           </Group>
           <Component id="jSeparator5" alignment="0" max="32767" attributes="0"/>
           <Group type="102" alignment="0" attributes="0">
-              <EmptySpace pref="234" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
               <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="238" max="32767" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -243,7 +270,7 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" attributes="0">
                       <Component id="jPanel3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace min="0" pref="37" max="32767" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
                   <Component id="telaFundo" max="32767" attributes="0"/>
               </Group>
@@ -421,9 +448,8 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" alignment="0" attributes="0">
-                  <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jLBFundo" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="jLBFundo" min="-2" pref="1013" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="6" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -439,7 +465,10 @@
       <SubComponents>
         <Component class="javax.swing.JLabel" name="jLBFundo">
           <Properties>
-            <Property name="text" type="java.lang.String" value="jLabel7"/>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/br/edu/ifpr/bsi/sispat/imagens/fundo01.jpg"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value=" "/>
           </Properties>
         </Component>
       </SubComponents>

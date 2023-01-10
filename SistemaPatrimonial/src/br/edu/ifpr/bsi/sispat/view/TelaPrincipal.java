@@ -166,7 +166,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jLabel1.setText("Controle Patrimonial Projeto CP - Sistema desenvolvido por Jaqueline Gabriele Dias - Todos os direitos reservados");
 
-        jLBFundo.setText("jLabel7");
+        jLBFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/imagens/fundo01.jpg"))); // NOI18N
+        jLBFundo.setText(" ");
 
         telaFundo.setLayer(jLBFundo, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
@@ -175,9 +176,8 @@ public class TelaPrincipal extends javax.swing.JFrame {
         telaFundoLayout.setHorizontalGroup(
             telaFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(telaFundoLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLBFundo)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(jLBFundo, javax.swing.GroupLayout.PREFERRED_SIZE, 1013, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 6, Short.MAX_VALUE))
         );
         telaFundoLayout.setVerticalGroup(
             telaFundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -225,6 +225,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
         jMFuncCadastro.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/mais.png"))); // NOI18N
         jMFuncCadastro.setText("Cadastrar");
+        jMFuncCadastro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMFuncCadastroActionPerformed(evt);
+            }
+        });
         jMenu8.add(jMFuncCadastro);
 
         jMFuncConsulta.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/pesquisa.png"))); // NOI18N
@@ -246,6 +251,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMenuItem2.setText("Funcionários");
         jMRelatorios.add(jMenuItem2);
 
+        jMenuItem3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/patrimonios.png"))); // NOI18N
         jMenuItem3.setText("Patrimônios");
         jMRelatorios.add(jMenuItem3);
 
@@ -254,9 +260,11 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMSeguranca.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/trancar.png"))); // NOI18N
         jMSeguranca.setText("Segurança   |");
 
+        jMenuItem4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/fazer-backup.png"))); // NOI18N
         jMenuItem4.setText("Fazer backup");
         jMSeguranca.add(jMenuItem4);
 
+        jMenuItem5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/restaurar-backup.png"))); // NOI18N
         jMenuItem5.setText("Restaurar backup");
         jMSeguranca.add(jMenuItem5);
 
@@ -265,19 +273,24 @@ public class TelaPrincipal extends javax.swing.JFrame {
         jMFerramentas.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/processo.png"))); // NOI18N
         jMFerramentas.setText("Ferramentas   |");
 
+        jMTelaFundo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/imagem.png"))); // NOI18N
         jMTelaFundo.setText("Tela de fundo");
 
+        jMAddImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/adicionar-imagem.png"))); // NOI18N
         jMAddImagem.setText("Add imagem");
         jMTelaFundo.add(jMAddImagem);
 
+        jMRemoverImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/remover-imagem.png"))); // NOI18N
         jMRemoverImagem.setText("Remover imagem");
         jMTelaFundo.add(jMRemoverImagem);
 
+        jMRestaurarImagem.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/restaurar-imagem.png"))); // NOI18N
         jMRestaurarImagem.setText("Restaurar padrão");
         jMTelaFundo.add(jMRestaurarImagem);
 
         jMFerramentas.add(jMTelaFundo);
 
+        jMSobreSistema.setIcon(new javax.swing.ImageIcon(getClass().getResource("/br/edu/ifpr/bsi/sispat/icones/sobre.png"))); // NOI18N
         jMSobreSistema.setText("Sobre o sistema");
         jMFerramentas.add(jMSobreSistema);
 
@@ -305,9 +318,9 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
             .addComponent(jSeparator5)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap(234, Short.MAX_VALUE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addComponent(jLabel1)
-                .addContainerGap(238, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -315,7 +328,7 @@ public class TelaPrincipal extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(0, 37, Short.MAX_VALUE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(telaFundo))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -333,19 +346,21 @@ public class TelaPrincipal extends javax.swing.JFrame {
 
     private void jBTLogoffActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jBTLogoffActionPerformed
         // TODO add your handling code here:
-        
-        Teste tela = new Teste();
-        telaFundo.add(tela);
-        tela.setVisible(true);
-        
+ 
     }//GEN-LAST:event_jBTLogoffActionPerformed
 
     private void jMSairMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMSairMouseClicked
         // TODO add your handling code here:
-        Teste2 tela = new Teste2();
-        telaFundo.add(tela);
-        tela.setVisible(true);
+      
     }//GEN-LAST:event_jMSairMouseClicked
+
+    private void jMFuncCadastroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMFuncCadastroActionPerformed
+        // TODO add your handling code here:
+        
+         TelaCadFuncionario tela = new TelaCadFuncionario();
+         telaFundo.add(tela);
+         tela.setVisible(true);
+    }//GEN-LAST:event_jMFuncCadastroActionPerformed
 
     /**
      * @param args the command line arguments
